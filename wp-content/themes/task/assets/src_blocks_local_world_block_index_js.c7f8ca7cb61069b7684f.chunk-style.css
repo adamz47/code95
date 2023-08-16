@@ -1,0 +1,10 @@
+.local_world_block .col-8 {
+  height: 100vh;
+}
+.local_world_block .col-4 {
+  height: 100vh;
+}
+.local_world_block .aspect-ratio {
+  padding-top: 70%;
+  width: 100%;
+}

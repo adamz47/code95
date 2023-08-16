@@ -1,0 +1,26 @@
+.local_world_block .posts-wrapper {
+  display: flex;
+}
+.local_world_block .posts-wrapper .wide-card {
+  width: 69%;
+}
+.local_world_block .posts-wrapper .wide-card picture {
+  height: 100%;
+  width: 90%;
+}
+.local_world_block .posts-wrapper .wide-card picture img {
+  width: 100%;
+  height: 100%;
+}
+.local_world_block .posts-wrapper .small-card {
+  width: 100%;
+  height: 50%;
+}
+.local_world_block .posts-wrapper .small-card picture {
+  height: 100%;
+  width: 100%;
+}
+.local_world_block .posts-wrapper .small-card picture img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,321 @@
+@use "../common/variables" as *;
+@use "../mixins/mixins" as *;
+
+.wp_collection_block {
+  @include small-screen {
+    @include paddingX(size(10));
+    @include paddingY(size(40))
+  }
+  @include paddingX(size(25));
+  padding-top: size(20);
+  background-color: #fafafa;
+
+  .section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 90vh;
+    @include large-screen {
+      flex-wrap: unset;
+    }
+
+    .cat-wrapper {
+      z-index: 3;
+      @include small-screen {
+        max-height: fit-content;
+        @include flexBasis(47%);
+        padding: size(10);
+        position: unset;
+      }
+      position: sticky;
+      top: size(10);
+      display: flex;
+      flex-direction: column;
+      @include flexBasis(30%);
+      background-color: $techne_theme_black;
+      border-radius: size(20);
+      padding: size(15);
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      height: 30%;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @include medium-screen {
+        padding: size(30);
+        max-height: 45vh;
+      }
+      @include large-screen {
+        @include flexBasis(25%);
+        padding: size(30);
+        height: 40%;
+      }
+
+      .cat-title {
+        font-family: "helvetica";
+        font-weight: 500;
+        font-size: size(23);
+        text-align: center;
+        color: $techne_theme_white;
+        margin-bottom: size(20);
+        text-transform: capitalize;
+        @include small-screen {
+          font-size: size(18);
+        }
+      }
+
+      .cat-name, .inner-sub-cat {
+        font-family: "helvetica";
+        font-weight: 500;
+        font-size: size(18);
+        color: $techne_theme_white;
+        border-bottom: 1px solid $techne_theme_white;
+        padding-bottom: size(5);
+        margin-bottom: size(15);
+        text-transform: capitalize;
+        transition: color $duration, border-bottom-color $duration;
+        @include small-screen {
+          font-size: size(14);
+        }
+
+        &:hover {
+          color: $techne_theme_red;
+          border-color: $techne_theme_red;
+        }
+
+        &.has-children {
+          margin-bottom: 0;
+          cursor: pointer;
+        }
+      }
+
+      .cat-svg-wrapper {
+        display: flex;
+        border-bottom: 1px solid $techne_theme_white;
+        margin-bottom: size(15);
+
+        svg {
+          width: size(15);
+          height: size(15);
+          margin-right: size(10);
+
+          path {
+            stroke: $techne_theme_white;
+          }
+        }
+
+        .cat-name {
+          border-bottom: 0;
+        }
+      }
+
+      .sub-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .cat-name{
+          color: #acabab;
+          transition: color $duration;
+
+          &:hover{
+            color: $techne_theme_red;
+          }
+        }
+      }
+
+      .sub-cats {
+
+        .inner-sub-cat {
+          display: block
+        }
+      }
+
+      .accordion-wrapper {
+        .accordion-body {
+          height: 0;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity $duration;
+        }
+
+        &.accordion-active {
+          .accordion {
+            transform: rotateX(180deg);
+            transition: transform $duration;
+          }
+
+          .accordion-body {
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+
+        .accordion {
+          cursor: pointer;
+        }
+      }
+
+    }
+
+    .post-wrapper {
+      @include small-screen {
+        @include flexBasis(51%);
+        padding: size(10);
+      }
+      @include flexBasis(70%);
+      padding: size(20);
+      @include large-screen {
+        @include flexBasis(50%);
+      }
+
+      .post-card {
+        display: flex;
+        justify-content: space-between;
+        @include small-screen {
+          flex-direction: column-reverse;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: size(15);
+        }
+
+        .aspect-ratio {
+          @include small-screen {
+            @include flexBasis(100%);
+            padding-top: 60%;
+            margin-bottom: size(20);
+          }
+          padding-top: 40%;
+          display: block;
+          @include flexBasis(35%);
+          border-radius: size(15);
+          overflow: hidden;
+
+
+          img {
+
+            transition: transform $duration;
+
+            &:hover {
+              transform: scale(1.1);
+
+            }
+          }
+        }
+
+        .card-content {
+          @include small-screen {
+            @include flexBasis(100%);
+          }
+          @include flexBasis(60%);
+
+          .post-title {
+            font-family: "helvetica";
+            font-size: size(19);
+            font-weight: 700;
+            display: block;
+            margin-bottom: size(15);
+            @include small-screen{
+              font-size: size(16);
+            }
+          }
+
+          .dimensions {
+
+            p {
+              font-family: "helvetica";
+              font-size: size(15);
+              font-weight: 500;
+              margin-bottom: size(10);
+            }
+
+            ul, ol {
+              padding-left: size(15);
+
+              li {
+                font-family: "helvetica";
+                font-size: size(15);
+                font-weight: 500;
+                margin-bottom: size(10);
+              }
+            }
+          }
+        }
+      }
+
+      .wp-collection-title {
+        margin-bottom: size(20);
+        font-size: size(19);
+      }
+
+      .cat-title-img {
+        margin-bottom: size(30);
+
+        img {
+          width: size(300);
+          height: 100%;
+          @include min-medium-screen {
+            float: right;
+          }
+        }
+      }
+    }
+
+    .form-wrapper {
+      @include flexBasis(100%);
+      background-color: $techne_theme_black;
+      border-radius: size(20);
+      padding: size(30);
+      margin-top: size(50);
+      height: fit-content;
+      @include large-screen {
+        @include flexBasis(25%);
+        margin-top: 0;
+      }
+
+      h3 {
+        font-size: size(28);
+        line-height: size(17);
+        font-weight: 600;
+        font-family: "helvetica";
+        color: $techne_theme_white;
+        margin-bottom: size(50);
+        text-transform: capitalize;
+        text-align: center;
+      }
+
+      .phone-number {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: size(20);
+        line-height: size(17);
+        font-weight: 500;
+        font-family: "helvetica";
+        color: $techne_theme_white;
+        margin-bottom: size(50);
+        transition: color $duration;
+
+        &:hover {
+          color: $techne_theme_red;
+        }
+
+        svg {
+          margin-right: size(10);
+          width: size(40);
+          height: size(40);
+
+          path {
+            fill: $techne_theme_red;
+          }
+        }
+      }
+    }
+
+  }
+
+}

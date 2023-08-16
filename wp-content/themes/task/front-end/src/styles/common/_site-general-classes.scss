@@ -1,0 +1,159 @@
+@use "variables" as *;
+@use "../mixins/mixins" as *;
+
+
+// region container
+.container {
+  max-width: size($design-width);
+  @include marginX(auto);
+  @include paddingX($container-padding-sm);
+  @include min-medium-screen {
+    @include paddingX($container-padding-md);
+  }
+  @include large-screen {
+    @include paddingX($container-padding-lg);
+  }
+  @at-root body .section-noContainer & {
+    @include paddingX(0);
+  }
+}
+
+//endregion
+
+// region font  Styling
+
+.headline-1, h1 {
+  @include font(27px, 700, 33px, $techne_theme_black, $inter);
+  @include min-medium-screen {
+    @include font-size(43px, 52px);
+  }
+}
+
+.headline-2, h2 {
+  @include font(27px, 600, 33px, $techne_theme_red, $inter);
+  @include min-medium-screen {
+    @include font-size(34px, 41px);
+  }
+
+}
+
+.headline-3, h3 {
+  @include font(17px, 600, 21px, $techne_theme_black, $inter);
+  @include min-medium-screen {
+    @include font-size(27px, 33px);
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+}
+
+.headline-4, h4 {
+  @include font(17px, 600, 21px, $techne_theme_black, $inter);
+  @include min-medium-screen {
+    @include font-size(24px, 29px);
+  }
+
+  &.bold {
+    font-weight: 700;
+
+  }
+}
+
+.headline-5, h5 {
+  @include font(18px, 600, 21px, $techne_theme_black, $inter);
+
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+}
+
+.paragraph, p {
+  @include font(14px, 400, 17px, $techne_theme_black, $inter);
+
+  &.medium {
+    font-weight: 500;
+  }
+}
+
+.excerpt {
+  @include font(14px, 400, 17px, $techne_theme_black, $inter);
+}
+
+// endregion
+//title of list in footer have this style//
+.footer-title {
+  @include font(18px, 600, 21px, $techne_theme_black, $inter);
+}
+
+//region blockquote
+
+blockquote.theme-blockquote, .wysiwyg-block blockquote {
+  position: relative;
+  @include font(24px, 400, 31px, $techne_theme_black);
+  padding: size(20);
+  width: fit-content;
+
+  p {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+  }
+
+  &:before, &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+}
+
+//endregion blockquote
+
+
+// region cta button
+.cta-button {
+  width: fit-content;
+  max-width: fit-content;
+  background-color: $techne_theme_white;
+  border-radius: size(20);
+  padding: size(20) size(30);
+  font-family: "helvetica";
+  font-weight: 500;
+  font-size: size(25);
+  line-height: 100%;
+  color: $techne_theme_black;
+  display: inline-block;
+  text-transform: capitalize;
+  box-shadow: 0 0 15px -2px $techne_theme_red;
+
+  &:hover {
+    background-color: $techne_theme_red;
+    color: $techne_theme_white;
+    outline: 0;
+  }
+}
+
+// endregion cta button
+
+// region cta link
+
+// endregion cta link
+
+

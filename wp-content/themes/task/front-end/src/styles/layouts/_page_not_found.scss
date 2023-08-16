@@ -1,0 +1,49 @@
+@use "../common/variables" as *;
+@use "../mixins/mixins" as *;
+
+
+.page-not-found {
+  @include paddingY(size(120));
+
+  @include min-medium-screen {
+    @include paddingY(size(250), size(120));
+  }
+
+  .content {
+    @include flex(center, center, column, false);
+  }
+
+  .error-tittle {
+    width: size(320);
+    height: size(324);
+    margin-bottom: size(30);
+    @include min-medium-screen {
+      width: size(575);
+      height: size(324);
+    }
+    @include large-screen {
+      width: size(574);
+      height: size(324);
+    }
+
+    svg {
+      @include square(100%);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $techne_theme_red;
+    text-align: center;
+  }
+
+  .paragraph {
+    max-width: size(970);
+    text-align: center;
+    color: $techne_theme_red;
+    @include marginY(size(40));
+  }
+
+  .btn {
+    min-width: size(275);
+  }
+}

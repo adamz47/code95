@@ -1,0 +1,140 @@
+@use "../../common/variables" as *;
+@use "../../mixins/mixins" as *;
+
+body {
+
+  .gform_wrapper {
+
+    .gform_heading {
+      display: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .gform_body {
+        .ginput_container {
+          width: size(310);
+          @include min-medium-screen {
+            width: size(500);
+          }
+          @include large-screen{
+            width: size(300);
+          }
+
+          input {
+            font-size: size(18);
+            line-height: size(17);
+            font-weight: 400;
+            font-family: "helvetica";
+            background-color: $techne_theme_white;
+            color: $techne_theme_black;
+            border-radius: 10px;
+            padding: size(15) size(16);
+            position: relative;
+            width: 100%;
+            height: size(48);
+            border: none;
+
+            &::placeholder {
+              color: lightslategrey;
+            }
+          }
+
+          label {
+            display: none;
+          }
+
+        }
+
+        .ginput_container_textarea {
+          textarea {
+            border-radius: size(20);
+            color: $techne_theme_black;
+            font-size: size(18);
+            line-height: size(17);
+            font-weight: 400;
+            font-family: "helvetica";
+            padding: size(15) size(16);
+            resize: none;
+
+            &::placeholder {
+              color: lightslategrey;
+              text-transform: capitalize;
+              font-size: size(18);
+              line-height: size(17);
+              font-weight: 400;
+              font-family: "helvetica";
+            }
+          }
+        }
+      }
+
+      .gform_footer {
+        margin-left: size(16);
+
+        button {
+          width: fit-content;
+          min-width: size(150);
+          @include flex(center, center);
+          @include font(14px, 700, 17px, $techne_theme_white, $inter);
+          background-color: $techne_theme_red;
+          transition: background-color $duration, color $duration;
+          cursor: pointer;
+          border-radius: size(10);
+          padding: size(15) size(24);
+          height: size(48);
+          @include small-screen {
+            padding: size(12);
+          }
+
+          &:hover {
+            background-color: $techne_theme_white;
+            color: $techne_theme_red;
+          }
+        }
+      }
+
+    }
+
+    .gform_validation_errors {
+      background: unset;
+      border: unset;
+      color: $techne_theme_red;
+      margin-bottom: size(15);
+
+      .gform_submission_error {
+        color: $techne_theme_white;
+
+        .gform-icon {
+
+          &:before {
+            color: $techne_theme_red;
+          }
+        }
+      }
+    }
+
+    .field_validation_message {
+      background: unset;
+      border: unset;
+      color: $techne_theme_red;
+    }
+  }
+
+  .gform_confirmation_wrapper {
+    .gform_confirmation_message {
+      font-size: size(24);
+      line-height: size(29);
+      font-family: $inter;
+      font-weight: 400;
+      color: $techne_theme_white;
+    }
+  }
+
+  .validation_message{
+    border-radius: size(20);
+  }
+}

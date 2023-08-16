@@ -1,0 +1,88 @@
+@use "../common/variables" as *;
+@use "../mixins/mixins" as *;
+
+
+.wp_search_block {
+  @include paddingY(size(50));
+
+  .search-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include large-screen {
+      flex-direction: row;
+    }
+
+    .left-section {
+      @include flexBasis(100%);
+      @include large-screen {
+        @include flexBasis(60%);
+      }
+
+      .headline-1 {
+        margin-bottom: size(40);
+
+        p {
+          margin-top: size(20);
+        }
+      }
+
+      .post-card {
+        margin-bottom: size(20);
+      }
+    }
+
+    .form-wrapper {
+      @include flexBasis(100%);
+      background-color: $techne_theme_black;
+      border-radius: size(20);
+      padding: size(30);
+      margin-top: size(50);
+      height: fit-content;
+      @include large-screen {
+        @include flexBasis(30%);
+        margin-top: 0;
+      }
+
+      h3 {
+        font-size: size(28);
+        line-height: size(17);
+        font-weight: 600;
+        font-family: "helvetica";
+        color: $techne_theme_white;
+        margin-bottom: size(50);
+        text-transform: capitalize;
+        text-align: center;
+      }
+
+      .phone-number {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: size(20);
+        line-height: size(17);
+        font-weight: 500;
+        font-family: "helvetica";
+        color: $techne_theme_white;
+        margin-bottom: size(50);
+        transition: color $duration;
+
+        &:hover {
+          color: $techne_theme_red;
+        }
+
+        svg {
+          margin-right: size(10);
+          width: size(40);
+          height: size(40);
+
+          path {
+            fill: $techne_theme_red;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,18 @@
+.features_block {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.features_block h2 {
+  text-transform: capitalize;
+}
+.features_block .features-top-wrapper {
+  width: 60%;
+}
+.features_block .features-top-wrapper .feature-wrapper .posts-wrapper picture {
+  width: 100%;
+  height: 100%;
+}
+.features_block .features-top-wrapper .feature-wrapper .posts-wrapper picture img {
+  width: 100%;
+  height: 100%;
+}

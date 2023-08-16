@@ -1,0 +1,7 @@
+.features_block {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.features_block h2 {
+  text-transform: capitalize;
+}

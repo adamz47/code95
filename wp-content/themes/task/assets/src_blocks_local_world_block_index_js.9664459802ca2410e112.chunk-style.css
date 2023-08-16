@@ -1,0 +1,13 @@
+.local_world_block .posts-wrapper {
+  display: flex;
+}
+.local_world_block .posts-wrapper .wide-card {
+  width: 69%;
+}
+.local_world_block .posts-wrapper .small-card {
+  width: 30%;
+}
+.local_world_block .aspect-ratio {
+  padding-top: 70%;
+  width: 100%;
+}

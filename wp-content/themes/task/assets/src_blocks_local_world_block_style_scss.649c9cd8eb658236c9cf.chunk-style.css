@@ -1,0 +1,17 @@
+.local_world_block .posts-wrapper {
+  display: flex;
+}
+.local_world_block .posts-wrapper .wide-card {
+  width: 69%;
+}
+.local_world_block .posts-wrapper .wide-card .aspect-ratio {
+  padding-top: 100%;
+  width: 100%;
+}
+.local_world_block .posts-wrapper .small-card {
+  width: 100%;
+}
+.local_world_block .posts-wrapper .small-card .aspect-ratio {
+  padding-top: 50%;
+  width: 100%;
+}

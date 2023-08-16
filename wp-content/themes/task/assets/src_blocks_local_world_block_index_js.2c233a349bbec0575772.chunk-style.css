@@ -1,0 +1,26 @@
+.local_world_block .posts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  gap: 3rem;
+  width: 100%;
+  background-color: red;
+}
+.local_world_block .posts-wrapper .wide-card {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1/span 2;
+}
+.local_world_block .posts-wrapper .small-card {
+  width: 50%;
+  grid-column: 2;
+  grid-row: 1/span 2;
+}
+.local_world_block .posts-wrapper .small-card:last-of-type {
+  width: 50%;
+  grid-column: 2;
+  grid-row: 2/span 2;
+}
+.local_world_block .aspect-ratio {
+  padding-top: 70%;
+  width: 100%;
+}

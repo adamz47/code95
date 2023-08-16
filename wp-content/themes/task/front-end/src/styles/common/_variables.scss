@@ -1,0 +1,29 @@
+// media screen sizes
+$small-screen-max-width: 599.98px;
+$medium-screen-max-width: 991.98px;
+
+
+$medium-screen-min-width: 600px;
+$large-screen-min-width: 992px;
+
+// color
+$techne_theme_black: var(--wp--preset--color--black);
+$techne_theme_white: var(--wp--preset--color--white);
+$techne_theme_red: var(--wp--preset--color--red);
+
+
+// fonts
+$inter: 'helvetica';
+//default duration
+$duration: 500ms;
+//override bootstrap variables
+$grid-gutter-width: 4rem;
+$container-padding-sm: 2.4rem;
+$container-padding-md: 5rem;
+$container-padding-lg: 12rem;
+
+// design screen sizes
+$design-width: 1440;
+$tablet-width: 992;
+$mobile-width: 600;
+$sMobile-width: 375;

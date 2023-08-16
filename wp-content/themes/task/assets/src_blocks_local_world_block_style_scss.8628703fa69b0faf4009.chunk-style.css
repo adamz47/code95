@@ -1,0 +1,8 @@
+.local_world_block .posts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+}
+.local_world_block .aspect-ratio {
+  padding-top: 70%;
+  width: 100%;
+}

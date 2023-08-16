@@ -1,0 +1,29 @@
+.egypt_news_block .swiper-wrapper {
+  display: flex;
+}
+.egypt_news_block .swiper-wrapper .swiper-slide {
+  position: relative;
+}
+.egypt_news_block .swiper-wrapper .swiper-slide picture {
+  height: 100%;
+}
+.egypt_news_block .swiper-wrapper .swiper-slide picture img {
+  height: 100%;
+}
+.egypt_news_block .swiper-wrapper .swiper-slide .post-title {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.egypt_news_block .swiper-button-prev {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  cursor: pointer;
+}
+.egypt_news_block .swiper-button-next {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  cursor: pointer;
+}

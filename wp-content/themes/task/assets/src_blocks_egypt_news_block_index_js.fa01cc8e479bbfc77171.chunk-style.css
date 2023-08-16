@@ -1,0 +1,23 @@
+.egypt_news_block .swiper-wrapper {
+  display: flex;
+}
+.egypt_news_block .swiper-wrapper .swiper-slide picture {
+  height: 100%;
+  width: 100%;
+}
+.egypt_news_block .swiper-wrapper .swiper-slide picture img {
+  width: 100%;
+  height: 100%;
+}
+.egypt_news_block .swiper-button-prev {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  cursor: pointer;
+}
+.egypt_news_block .swiper-button-next {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  cursor: pointer;
+}

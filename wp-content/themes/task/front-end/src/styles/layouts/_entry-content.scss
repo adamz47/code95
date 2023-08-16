@@ -1,0 +1,16 @@
+@use "../common/variables" as *;
+@use "../mixins/mixins" as *;
+
+
+.page-template-entry-content {
+  .entry-content-template-wrapper {
+    @include paddingY(size(140));
+    @include min-medium-screen {
+      @include paddingY(size(130), size(90));
+    }
+    @include large-screen {
+      @include paddingY(size(130));
+    }
+  }
+}
+

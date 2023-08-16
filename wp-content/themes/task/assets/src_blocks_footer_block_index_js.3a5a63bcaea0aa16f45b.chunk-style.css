@@ -1,0 +1,85 @@
+footer {
+  background-color: #e6e6e6;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+footer .footer-wrapper {
+  display: grid;
+  gap: 2.4rem;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 8rem;
+}
+@media screen and (min-width: 600px) and (max-width: 991.98px) {
+  footer .footer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  footer .footer-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+footer .footer-wrapper .asukoht-data .bottom-text, footer .footer-wrapper .tokooda .bottom-text {
+  max-width: unset;
+}
+footer .footer-wrapper .title {
+  font-size: 2.7rem;
+  line-height: 122.2222222222%;
+  font-weight: 700;
+  color: var(--wp--preset--color--black);
+  font-family: "helvetica";
+  margin-bottom: 3rem;
+}
+footer .footer-wrapper .inner-title {
+  font-size: 2.7rem;
+  line-height: 122.2222222222%;
+  font-weight: 500;
+  color: #585858;
+  font-family: "helvetica";
+}
+footer .footer-wrapper .bottom-text {
+  font-size: 2.7rem;
+  line-height: 122.2222222222%;
+  font-weight: 500;
+  color: var(--wp--preset--color--black);
+  font-family: "helvetica";
+  margin-bottom: 3rem;
+  max-width: 80%;
+}
+footer .footer-wrapper .bottom-text:last-of-type {
+  margin-bottom: 7rem;
+}
+@media screen and (min-width: 600px) and (max-width: 991.98px) {
+  footer .footer-wrapper .bottom-text {
+    max-width: 72%;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer .footer-wrapper .bottom-text {
+    max-width: 50%;
+  }
+}
+footer .footer-wrapper a {
+  text-decoration: underline;
+  display: block;
+}
+footer .footer-wrapper a:hover {
+  color: var(--wp--preset--color--red);
+}
+footer .footer-wrapper .facebook svg {
+  width: 5rem;
+  height: 5rem;
+}
+footer .map {
+  margin-bottom: 3rem;
+}
+footer .site-info p {
+  font-size: 2.7rem;
+  line-height: 122.2222222222%;
+  font-weight: 500;
+  color: var(--wp--preset--color--black);
+  font-family: "helvetica";
+  text-align: center;
+  margin-bottom: 0.5rem;
+}

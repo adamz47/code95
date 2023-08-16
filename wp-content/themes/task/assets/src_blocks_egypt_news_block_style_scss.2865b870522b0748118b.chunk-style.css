@@ -1,0 +1,8 @@
+.egypt_news_block .carousel-inner {
+  display: flex;
+}
+.egypt_news_block .carousel-inner .carousel-item {
+  width: 30%;
+  height: -moz-fit-content;
+  height: fit-content;
+}

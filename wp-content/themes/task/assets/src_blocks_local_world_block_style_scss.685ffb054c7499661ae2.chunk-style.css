@@ -1,0 +1,7 @@
+.local_world_block .col-8 {
+  background: red;
+}
+.local_world_block .aspect-ratio {
+  padding-top: 70%;
+  width: 100%;
+}

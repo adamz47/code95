@@ -1,0 +1,6 @@
+.local_world_block {
+  background-color: red !important;
+}
+.local_world_block .posts-wrapper {
+  background-color: red;
+}
